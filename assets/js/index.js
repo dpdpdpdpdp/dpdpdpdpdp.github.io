@@ -172,6 +172,12 @@ app.config([
                             Page,
                             $timeout
                         ) {
+                        	$scope.readMoreScroll=function(cl){
+                        		
+                        		$('html, body').animate({
+                                    scrollTop: $(cl).offset().top-150
+                                }, 700);
+                        	};
                             window.scrollTo(0, 0);
                             Page.setTitle("Cataract");
                             $rootScope.bodyClass = "";
@@ -887,7 +893,9 @@ app.run(["$rootScope", "$state", "Page","$timeout", function($rootScope, $state,
         if (closestUl) {
             $(closestUl).find('li').each(function(i, eachLi) {
                 eachLi.classList.remove('active');
-                
+                if(screen.width<768){
+                	$(currentTarget).removeClass('active');
+                }
             });
         }
         

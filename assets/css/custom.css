@@ -305,6 +305,10 @@ h1.m-heading {
 	
 	width:100% !important;
 }
+.r1,r2{
+	-webkit-transition: height 2s;
+	transition:height 2s;
+}
 .footer-media-icon{
 	display:flex;
 	justify-content:center;

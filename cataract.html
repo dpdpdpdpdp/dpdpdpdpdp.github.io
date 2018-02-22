@@ -86,14 +86,14 @@
                     </div>
                     
                     <h3>OVER 65 YEARS OF <br>EXPERTISE IN CATARACT</h3>
-                    <p class="m-bottom-text" style="text-align:justify;padding:2px;height:168px;{{moreText1 ? 'overflow-y: scroll;' : 'overflow-y:hidden;'}}">This hospital, established by <b>Padmabushan Dr. P Siva Reddy</b>, is a result of legacy that has been nurtured over 3 generations bringing forth a sincere health care facility that PSR Eye Hospital is today. This hospital is a result of sheer dedication, hard work and sincerity of Dr. P Siva Reddy (the founding father), Dr. H Prabhakar Reddy and grandson Dr. H Siva Mohan Reddy. Dr P Siva Reddy’s story is that of sheer dedication, hard work and sincerity toward his vision for a world that is cured of treatable blindness. He was honoured with Padmabushan in 1977, Padmashri in 1971, and B.C Roy Awards in 1981 and again in 1987. Dr. Reddy was appointed as Honorary Surgeon to the President of India, Sri V.V.Giri, in which capacity he served the chair for 25 years. Padmabushan Dr Perugu Siva Reddy Regional Eye Hospital, Kurnool, was named in his honour by the Government of Andhra Pradesh, in recognition of his services.
+                    <p class="m-bottom-text r1" style="text-align:justify;padding:2px;{{moreText1?((scrWidth<768)?'height:auto;':'height:168px;'):'height:168px;'}}{{moreText1 ? 'overflow-y: scroll;' : 'overflow-y:hidden;'}}">This hospital, established by <b>Padmabushan Dr. P Siva Reddy</b>, is a result of legacy that has been nurtured over 3 generations bringing forth a sincere health care facility that PSR Eye Hospital is today. This hospital is a result of sheer dedication, hard work and sincerity of Dr. P Siva Reddy (the founding father), Dr. H Prabhakar Reddy and grandson Dr. H Siva Mohan Reddy. Dr P Siva Reddy’s story is that of sheer dedication, hard work and sincerity toward his vision for a world that is cured of treatable blindness. He was honoured with Padmabushan in 1977, Padmashri in 1971, and B.C Roy Awards in 1981 and again in 1987. Dr. Reddy was appointed as Honorary Surgeon to the President of India, Sri V.V.Giri, in which capacity he served the chair for 25 years. Padmabushan Dr Perugu Siva Reddy Regional Eye Hospital, Kurnool, was named in his honour by the Government of Andhra Pradesh, in recognition of his services.
                         <br/> After his retirement from formal duties, he continued to follow his religion of serving people and instituted Dr. P Siva Reddy Hospital in Hyderabad with a single consultation room. After 3 generations his legacy has evolved into a State-Of-Art Advanced Surgical and Laser Eye Care Centre.
                         <br/> Today the institution is in the able hands of Dr. P Siva Reddy’s grandson, Dr. H Siva Mohan Reddy. Under the wise counsel of his father Dr. H Prabhakar Reddy and inspiration from his grandfather’s life of service and dedication, Dr. H Siva Mohan Reddy took it upon himself to upgrade the medical facilities at PSR Hospital to the latest technology and best of amenities. Dr. P Siva Reddy’s legacy lies in the memories of his patients as a doctor who truly cared; this legacy has been nurtured over 3 generations bringing forth a sincere health care facility that PSR Eye Hospital is today.
                     </p>
                     <p>
                         <div ng-click="moreText1=!moreText1;" class="c-init" style="width: 200px; display: inline-block; ">
                             <div class="btn-1-div">
-                                <button  type="button" class="btn btn-md btn-1">{{ !moreText1 ? "READ MORE" : "READ LESS"}}</button>
+                                <button ng-click="(scrWidth<768)?readMoreScroll('.r1'):''"  type="button" class="btn btn-md btn-1">{{ !moreText1 ? "READ MORE" : "READ LESS"}}</button>
                             </div>
                         </div>
                     </p>
@@ -104,13 +104,13 @@
                         <img class="rounded-circle m-cataract-3icons" src="images/catract machine icon.svg" alt="Generic placeholder image" width="140" height="140">
                     </div>
                     <h3>FIRST IN HYDERABAD <br>TECHNOLOGY</h3>
-                    <p class="m-bottom-text" style="text-align:justify;padding:2px;height:168px;{{moreText2 ? 'overflow-y: scroll;' : 'overflow-y:hidden;'}}">At PSR Eye Hospital, modern devices are not only used to perform the surgery but are effectively used to study the patient’s eye and plan the actual surgery, even before taking the patient to the operation table.
+                    <p class="m-bottom-text r2" style="text-align:justify;padding:2px;{{moreText2?((scrWidth<768)?'height:auto;':'height:168px;'):'height:168px;'}}{{moreText2 ? 'overflow-y: scroll;' : 'overflow-y:hidden;'}}">At PSR Eye Hospital, modern devices are not only used to perform the surgery but are effectively used to study the patient’s eye and plan the actual surgery, even before taking the patient to the operation table.
                         <br/> With ultra-modern machines like <b>Verion Image Guided System™</b>, Laser Vision Correction Procedure With <b>Zeiss ReLEx SMILE</b> & Laser Vision Correction Procedure With <b>Schwind Amaris 750S</b>, PSR is the leader in vision correction surgeries especially CATARACT and LASIK Surgery.
                     </p>
                     <p>
                         <div ng-click="moreText2=!moreText2;" class="c-init" style="width: 200px; display: inline-block; ">
                             <div class="btn-1-div">
-                                <button type="button" class="btn btn-md btn-1">{{ !moreText2 ? "READ MORE" : "READ LESS"}}</button>
+                                <button ng-click="(scrWidth<768)?readMoreScroll('.r2'):''" type="button" class="btn btn-md btn-1">{{ !moreText2 ? "READ MORE" : "READ LESS"}}</button>
                             </div>
                         </div>
                     </p>
@@ -121,7 +121,7 @@
                         <img class="rounded-circle m-cataract-3icons" src="images/catract review icon.svg" alt="Generic placeholder image" width="140" height="140">
                     </div>
                     <h3>CHECK OUT WHAT PEOPLE HAS <br>TO SAY ABOUT US</h3>
-                    <p class="m-bottom-text" style="text-align:justify;padding:2px;height:168px;{{moreText3 ? 'overflow-y: scroll;' : 'overflow-y:hidden;'}}">We believe in Professional excellence with personal touch and we work constantly to provide our patients with the most advanced personalised eye treatment. We thank all our patients for believing in us.</p>
+                    <p class="m-bottom-text" style="text-align:justify;padding:2px;{{moreText3?((scrWidth<768)?'height:auto;':'height:168px;'):'height:168px;'}}{{moreText3 ? 'overflow-y: scroll;' : 'overflow-y:hidden;'}}">We believe in Professional excellence with personal touch and we work constantly to provide our patients with the most advanced personalised eye treatment. We thank all our patients for believing in us.</p>
                     <p>
                         <div ng-click="moreText3=!moreText3;" class="c-init" style="width: 200px; display: inline-block; ">
                             <div class="btn-1-div">
@@ -156,47 +156,58 @@
                                 
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
                             
-            				<div class="hidden-lg" ng-show="myView=='about'" style="padding: 30px 20px;">
-                             <div ui-view="about"></div>
+            				<div class="hidden-lg" ng-show="myView=='about'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;margin-bottom:0px;">
+            				<div style="margin-top:-5px;margin-bottom:0px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
+                             <div ui-view="about" style="padding-top:15px;"></div>
                              </div>
                         </li>
                         <li ng-click="go('cataract.decisions','.m-left-panel-row .right-sec', $event)" set-view="decisions" class="outcomes">
                             <div>
                                 <span data-width="160">2. DECISIONS</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                            <div class="hidden-lg" ng-show="myView=='decisions'" style="padding: 30px 20px;">
-                             <div ui-view="decisions"></div>
+                               <div class="hidden-lg" ng-show="myView=='decisions'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
+            					<div style="margin-top:-5px;margin-bottom:0px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
+
+                             	<div ui-view="decisions" style="padding-top:15px;"></div>
                              </div>
                         </li>
                         <li ng-click="go('cataract.outcomes','.m-left-panel-row .right-sec', $event)" set-view="outcomes" class="outcomes">
                             <div>
                                 <span data-width="166">3. OUTCOMES</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                            <div class="hidden-lg" ng-show="myView=='outcomes'" style="padding: 30px 20px;">
-                             <div ui-view="outcomes"></div>
+                                        				<div class="hidden-lg" ng-show="myView=='outcomes'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
+            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
+
+                             <div ui-view="outcomes" style="padding-top:15px;"></div>
                              </div>
                         </li>
                         <li ng-click="go('cataract.stepbystep','.m-left-panel-row .right-sec', $event)" set-view="stepbystep" class="stepbystep">
                             <div>
                                 <span data-width="195">4. STEP-BY-STEP</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                            <div class="hidden-lg" ng-show="myView=='stepbystep'" style="padding: 30px 20px;">
-                             <div ui-view="stepbystep"></div>
+							<div class="hidden-lg" ng-show="myView=='stepbystep'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
+            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
+
+                             <div ui-view="stepbystep" style="padding-top:15px;"></div>
                              </div>
                         </li>
                         <li ng-click="go('cataract.postopcare','.m-left-panel-row .right-sec', $event)" set-view="postopcare" class="postopcare">
                             <div>
-                                <span data-width="380">5. POST-OP CARE AND RECOVERY</span></div>
+                                <span data-width="230">5. POST-OP CARE AND RECOVERY</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                            <div class="hidden-lg" ng-show="myView=='postopcare'" style="padding: 30px 20px;">
-                             <div ui-view="postopcare"></div>
+                                        				<div class="hidden-lg" ng-show="myView=='postopcare'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
+            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
+
+                             <div ui-view="postopcare" style="padding-top:15px;"></div>
                              </div>
                         </li>
                         <li ng-click="go('cataract.consult','.m-left-panel-row .right-sec', $event)" set-view="consult" class="consult" >
                             <div><span data-width="316">6. CONSULT EYE SURGEON</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                            <div class="hidden-lg" ng-show="myView=='consult'" style="padding: 30px 20px;">
-                             <div ui-view="consult"></div>
+							<div class="hidden-lg" ng-show="myView=='consult'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
+            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
+
+                             <div ui-view="consult" style="padding-top:15px;"></div>
                              </div>
                         </li>
                     </ul>
