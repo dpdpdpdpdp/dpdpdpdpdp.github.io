@@ -881,68 +881,50 @@ app.config([
     }
 ]);
 app.run(["$rootScope", "$state", "Page","$timeout", function($rootScope, $state, Page,$timeout) {
-	$rootScope.myView="about";
-	$rootScope.scrWidth=screen.width;
 	
-	var ch="about";
-    $rootScope.go = function(state, selector, event) {
-    	
+	$rootScope.scrWidth=screen.width;
+	$rootScope.go = function(state, selector, event) {
         const currentTarget = event.currentTarget;
-        $rootScope.myView=currentTarget.getAttribute("set-view");
-        const closestUl = currentTarget.closest('ul');
-        if (closestUl) {
-            $(closestUl).find('li').each(function(i, eachLi) {
+        var liClass = null;
+        for (var i = 0; i < currentTarget.classList.length; i++) {
+            if (currentTarget.classList[i] != 'active' && currentTarget.classList[i].indexOf('t-') > -1) {
+                liClass = currentTarget.classList[i];
+                break;
+            }
+        }
+        const closestUls = $('ul.m-lasik-content-headings');
+        for (var i = 0; i < closestUls.length; i++) {
+            const parentIndex = i;
+            $(closestUls[i]).find('li').each(function(i, eachLi) {
                 eachLi.classList.remove('active');
-                if(screen.width<768){
-                	$(currentTarget).removeClass('active');
+                if (parentIndex > 0) {
+                    eachLi.classList.remove('hide');
                 }
             });
         }
-        
-      
-        $state.go(state);
-        if(screen.width>768){
-        	$(currentTarget).addClass('active');
-        	$('html, body').animate({
-                scrollTop: $(selector).offset().top - 78
-            }, 700);
-    	}
-        else{
-        	
-        	/*console.log("ch "+ch);
-        	console.log("myview := "+$rootScope.myView);*/
-        		$rootScope.myView=($rootScope.myView==ch)?matched():notMatched();
-        		console.log("myview := "+$rootScope.myView);
-        		function matched(){
-        			$(currentTarget).removeClass('active');
-        			console.log("matched");
-        			ch='';
-        			return "";
-        		}
-        		function notMatched(){
-        			$(currentTarget).addClass('active');
-        			console.log("not matched");
-        			ch=currentTarget.getAttribute("set-view");
-        			return $rootScope.myView;
-        		}
-        		console.log("after myview = "+$rootScope.myView);
-        		$timeout(function(){
-        			$('html, body').animate({
-                        scrollTop: $(selector).offset().top+$(currentTarget).offset().top-85
-                    }, 700);
-        		},1000);
-        		
-        		console.log("ch "+ch);
-        	
+        const closestLis = $('ul.m-lasik-content-headings' + ' .' + liClass);
+        if (closestLis) {
+            for (var i = 0; i < closestLis.length; i++) {
+                if (i > 0) {
+                    $(closestLis[i]).addClass('hide');
+                }
+                $(closestLis[i]).addClass('active');
+            }
         }
+        $(currentTarget).addClass('active');
+        $('html, body').animate({
+            scrollTop: $(selector).offset().top - 78
+        }, 700);
+        $state.go(state);
     };
-
+    $rootScope.deviceWidth = window.innerWidth;
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         url = 'images/PSR Logo.png',
             description = 'A World Class Cataract & Lasik Surgical Centre'
         Page.setImage(url);
         Page.setDescription(description);
     });
+	
 }])
 // app.run(["$rootScope", "$location", "$state", function($rootScope, $location, $state) {
 //                 $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {

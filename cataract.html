@@ -136,9 +136,9 @@
     </div>
 </section>
 <section>
-    <div class="row c-reset m-left-panel-row ">
-        <div class="col-md-4 " style="padding: 0px;">
-            <div class="m-left-panel " style="background: url('images/lasik/lasik-background-min.png') center/cover no-repeat;padding: 30px 0px 30px 30px;">
+    <div class="row c-reset m-left-panel-row">
+        <div class="col-md-4" style="padding: 0px;">
+            <div class="m-left-panel" style="background: url('images/lasik/lasik-background-min.png') center/cover no-repeat;padding: 30px 0px 30px 30px;">
                 <h1 class="m-heading p-b-25" style="padding-top: 10px;padding-bottom: 0px;color: #fff;line-height: 1;">
                     <span class="m-heading-block" style="font-size: 2rem;font-weight: 100;">ADVANCED
                     </span>
@@ -148,74 +148,42 @@
                 </h1>
                 <p>Modern cataract surgery is one of the safest and most effective medical procedures today. It helps millions of people each year in India to avert blindness over their lifetime.
                 </p>
-                <div style="height: 100%;position: relative;padding-bottom: 80px;" class="">
-                    <ul class="m-lasik-content-headings" >
-                        <li ng-click="go('cataract.about','.m-left-panel-row .right-sec', $event)" set-view="about" ui-sref="cataract.about" class="types active">
+                <div style="height: 100%;position: relative;padding-bottom: 80px;">
+                    <ul class="m-lasik-content-headings">
+                        <li ng-click="go('cataract.about','.m-left-panel-row .right-sec', $event)" class="types active t-about">
                             <div>
-                                <span data-width="113">1. ABOUT</span> </div>
-                                
+                                <span data-width="113">1. ABOUT</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                            
-            				<div class="hidden-lg" ng-show="myView=='about'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;margin-bottom:0px;">
-            				<div style="margin-top:-5px;margin-bottom:0px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
-                             <div ui-view="about" style="padding-top:15px;"></div>
-                             </div>
                         </li>
-                        <li ng-click="go('cataract.decisions','.m-left-panel-row .right-sec', $event)" set-view="decisions" class="outcomes">
+                        <li ng-click="go('cataract.decisions','.m-left-panel-row .right-sec', $event)" class="outcomes t-decisions">
                             <div>
                                 <span data-width="160">2. DECISIONS</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                               <div class="hidden-lg" ng-show="myView=='decisions'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
-            					<div style="margin-top:-5px;margin-bottom:0px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
-
-                             	<div ui-view="decisions" style="padding-top:15px;"></div>
-                             </div>
                         </li>
-                        <li ng-click="go('cataract.outcomes','.m-left-panel-row .right-sec', $event)" set-view="outcomes" class="outcomes">
+                        <li ng-click="go('cataract.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes t-outcomes">
                             <div>
                                 <span data-width="166">3. OUTCOMES</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                                        				<div class="hidden-lg" ng-show="myView=='outcomes'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
-            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
-
-                             <div ui-view="outcomes" style="padding-top:15px;"></div>
-                             </div>
                         </li>
-                        <li ng-click="go('cataract.stepbystep','.m-left-panel-row .right-sec', $event)" set-view="stepbystep" class="stepbystep">
+                        <li ng-click="go('cataract.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep t-stepbystep">
                             <div>
                                 <span data-width="195">4. STEP-BY-STEP</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-							<div class="hidden-lg" ng-show="myView=='stepbystep'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
-            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
-
-                             <div ui-view="stepbystep" style="padding-top:15px;"></div>
-                             </div>
                         </li>
-                        <li ng-click="go('cataract.postopcare','.m-left-panel-row .right-sec', $event)" set-view="postopcare" class="postopcare">
+                        <li ng-click="go('cataract.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare t-postopcare">
                             <div>
-                                <span data-width="230">5. POST-OP CARE AND RECOVERY</span></div>
+                                <span data-width="{{ deviceWidth > 500 ? '361' : '267'}}">5. POST-OP CARE AND RECOVERY</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-                                        				<div class="hidden-lg" ng-show="myView=='postopcare'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
-            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
-
-                             <div ui-view="postopcare" style="padding-top:15px;"></div>
-                             </div>
                         </li>
-                        <li ng-click="go('cataract.consult','.m-left-panel-row .right-sec', $event)" set-view="consult" class="consult" >
+                        <li ng-click="go('cataract.consult','.m-left-panel-row .right-sec', $event)" class="consult t-consult">
                             <div><span data-width="316">6. CONSULT EYE SURGEON</span></div>
                             <icon class="m-arrow-right pos d-none d-md-block"></icon>
-							<div class="hidden-lg" ng-show="myView=='consult'" style="overflow:hidden;padding: 0px 5px;text-align:justify;background-color:white;width:108.8%;margin-left:-30px;">
-            				<div style="margin-top:-5px;margin-bottom:15px;margin-left:-5px;height:5px ;width:105%;background-color:white;box-shadow: rgb(53, 53, 53) 0px 0px 9px 2px"></div>
-
-                             <div ui-view="consult" style="padding-top:15px;"></div>
-                             </div>
                         </li>
                     </ul>
-                  
                 </div>
             </div>
         </div>
-        <div class="col-md-8 right-sec hidden-xs">
+        <div class="col-md-8 right-sec">
             <div style="padding: 30px 20px;">
                 <div ui-view="about"></div>
                 <div ui-view="decisions"></div>
@@ -225,8 +193,44 @@
                 <div ui-view="consult"></div>
             </div>
         </div>
+        <div class="d-md-none m-left-panel no-shadow bg-white" style="background: url('images/lasik/lasik-background-min.png') center/cover no-repeat; padding: 10px 0px 10px 60px; width: 100%;">
+                <div style="height: 100%;position: relative;">
+                    <ul class="m-lasik-content-headings">
+                        <li ng-click="go('cataract.about','.m-left-panel-row .right-sec', $event)" class="types active t-about hide">
+                            <div>
+                                <span data-width="113">1. ABOUT</span></div>
+                            <icon class="m-arrow-right pos d-none d-md-block"></icon>
+                        </li>
+                        <li ng-click="go('cataract.decisions','.m-left-panel-row .right-sec', $event)" class="outcomes t-decisions">
+                            <div>
+                                <span data-width="160">2. DECISIONS</span></div>
+                            <icon class="m-arrow-right pos d-none d-md-block"></icon>
+                        </li>
+                        <li ng-click="go('cataract.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes t-outcomes">
+                            <div>
+                                <span data-width="166">3. OUTCOMES</span></div>
+                            <icon class="m-arrow-right pos d-none d-md-block"></icon>
+                        </li>
+                        <li ng-click="go('cataract.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep t-stepbystep">
+                            <div>
+                                <span data-width="195">4. STEP-BY-STEP</span></div>
+                            <icon class="m-arrow-right pos d-none d-md-block"></icon>
+                        </li>
+                        <li ng-click="go('cataract.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare t-postopcare">
+                            <div>
+                                <span data-width="{{ deviceWidth > 500 ? '361' : '267'}}">5. POST-OP CARE AND RECOVERY</span></div>
+                            <icon class="m-arrow-right pos d-none d-md-block"></icon>
+                        </li>
+                        <li ng-click="go('cataract.consult','.m-left-panel-row .right-sec', $event)" class="consult t-consult">
+                            <div><span data-width="316">6. CONSULT EYE SURGEON</span></div>
+                            <icon class="m-arrow-right pos d-none d-md-block"></icon>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </div>
 </section>
+
 <!--       <div class="bg-pinkline about" style="padding-bottom: 161px;margin-top: -600px;position: relative; overflow: hidden;"> 
                 <div class="bubbly2 hidden-xs" style="position: absolute; bottom: -20px; left: -40px; ">
                     <img src="images/Artboard-1-min.png" width="105%">
