@@ -88,17 +88,17 @@ is best for you.
                                 <li> I want to get out there and play sports, travel and live an active life-without depending on glasses
    or contacts.</li>
                                 <li> I want to be able to read the alarm clock in the morning.</li>
-                                <li>I'd feel safer about everything from swimming in the ocean to finding my way at night if I didnâ€™t
+                                <li>I'd feel safer about everything from swimming in the ocean to finding my way at night if I didn’t
    need to wear glasses or contacts.</li>
                                 <li>Taking care of my contact lenses is too time-consuming.</li>
                                 <li>I would be able to work more effectively if I could see better through my own eyes.</li>
-                                <li>I'd feel better about my appearance if I didnâ€™t have to wear glasses.</li>
+                                <li>I'd feel better about my appearance if I didn’t have to wear glasses.</li>
                             </ul>
                         </div>
                         <p class="font-blue">
-                            These are the main reasons people get LASIK. Theyâ€™re also the same reasons so many people are satisfied with the results. If you are over 21 yrs of age, have healthy cornea and stable refraction since 1 year, LASIK may be able to
-help. If youâ€™re over age 40 and also have presbyopia or cataracts, other surgical options may be
-even better for you. Learn more about presbyopia surgery and cataract surgery. If youâ€™re under age
+                            These are the main reasons people get LASIK. They’re also the same reasons so many people are satisfied with the results. If you are nearsighted, farsighted or astigmatic, LASIK may be able to
+help. If you’re over age 40 and also have presbyopia or cataracts, other surgical options may be
+even better for you. Learn more about presbyopia surgery and cataract surgery. If you’re under age
 40 and are nearsighted, farsighted or astigmatic, learn more about the types of LASIK surgery to
 see which one may be right for you.
                         </p>
@@ -140,29 +140,29 @@ see which one may be right for you.
                    lenses. By utilizing the latest laser vision
                    correction technology and a unique
                    approach, Dr. P Siva Reddy eye hospital
-                   helps you gain the freedom youâ€™re
+                   helps you gain the freedom you’re
                    seeking with clarity.
                 </p>
                 <div style="height: 100%;position: relative;padding-bottom: 80px;">
                     <ul class="m-lasik-content-headings">
-                        <li ng-click="go('lasik.types','.m-left-panel-row .right-sec', $event)" class="types active">
+                        <li ng-click="go('lasik.types','.m-left-panel-row .right-sec', $event)" class="types t-types active">
                             <div><span data-width="102">1. TYPES</span>
                             </div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('lasik.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes">
+                        <li ng-click="go('lasik.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes t-outcomes">
                             <div><span data-width="167">2. OUTCOMES</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('lasik.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep">
+                        <li ng-click="go('lasik.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep t-stepbystep">
                             <div><span data-width="195">3. STEP-BY-STEP</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('lasik.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare">
-                            <div><span data-width="361">4. POST-OP CARE & RECOVERY</span></div>
+                        <li ng-click="go('lasik.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare t-postopcare">
+                            <div><span data-width="{{ deviceWidth > 500 ? '361' : '267'}}">4. POST-OP CARE & RECOVERY</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('lasik.consult','.m-left-panel-row .right-sec', $event)" class="consult">
+                        <li ng-click="go('lasik.consult','.m-left-panel-row .right-sec', $event)" class="consult t-consult">
                             <div><span data-width="316">5. CONSULT EYE SURGEON</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
@@ -179,6 +179,33 @@ see which one may be right for you.
                 <div ui-view="consult"></div>
             </div>
         </div>
+        <div class="d-md-none m-left-panel no-shadow bg-white" style="background: url('images/lasik/lasik-background-min.png') center/cover no-repeat; padding: 10px 0px 10px 60px; width: 100%;">
+                <div style="height: 100%;position: relative;">
+                    <ul class="m-lasik-content-headings">
+                        <li ng-click="go('lasik.types','.m-left-panel-row .right-sec', $event)" class="types t-types active hide">
+                            <div><span data-width="102">1. TYPES</span>
+                            </div>
+                            <icon class="m-arrow-right pos"></icon>
+                        </li>
+                        <li ng-click="go('lasik.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes t-outcomes">
+                            <div><span data-width="167">2. OUTCOMES</span></div>
+                            <icon class="m-arrow-right pos"></icon>
+                        </li>
+                        <li ng-click="go('lasik.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep t-stepbystep">
+                            <div><span data-width="195">3. STEP-BY-STEP</span></div>
+                            <icon class="m-arrow-right pos"></icon>
+                        </li>
+                        <li ng-click="go('lasik.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare t-postopcare">
+                            <div><span data-width="{{ deviceWidth > 500 ? '361' : '267'}}">4. POST-OP CARE & RECOVERY</span></div>
+                            <icon class="m-arrow-right pos"></icon>
+                        </li>
+                        <li ng-click="go('lasik.consult','.m-left-panel-row .right-sec', $event)" class="consult t-consult">
+                            <div><span data-width="316">5. CONSULT EYE SURGEON</span></div>
+                            <icon class="m-arrow-right pos"></icon>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </div>
     <div class="stopscroll"></div>
 </section>

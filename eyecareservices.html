@@ -1,4 +1,4 @@
-	<section style="padding-top: 75px;overflow: hidden;" class="bg-purple eyecareservice-section">
+	<section style="padding-top: 75px;overflow: hidden;{{(scrWidth>768)?'height:700px':''}}" class="bg-purple eyecareservice-section">
     <div>
         <div>
             <div class="row c-reset">
@@ -58,11 +58,11 @@
                 </div>
             </div>
         </div>
-        <div ng-if="currentService.pointNumber === '01'" class="d-none d-md-block" style="position: absolute; top: 0px;overflow: hidden;z-index: 0;">
+        <div ng-if="currentService.pointNumber === '01'" class="d-none d-md-block" style="position: absolute; top: 0px;overflow: hidden;z-index: 0;height:700px;">
             <img ng-src="{{currentService.serviceImage}}" alt="{{currentService.serviceName}}" class="eye-img">
         </div>
         <div ng-if="currentService.pointNumber !== '01'" class="d-none d-md-block" style="position: absolute; top: 74px;overflow: hidden;z-index: 0;height: 626px;">
-            <img ng-src="{{currentService.serviceImage}}" alt="{{currentService.serviceName}}" class="eye-img">
+            <img ng-src="{{currentService.serviceImage}}" alt="{{currentService.serviceName}}" class="eye-img-other">
         </div>
     </div>
 </section>

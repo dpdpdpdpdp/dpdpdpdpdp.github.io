@@ -336,11 +336,15 @@ h1.m-heading {
     background-position: center;
 }
 .eye-img{
-	width:85%;
-	height:600px;
+	width:75%;	
+}
+.eye-img-other{
+	width:80%;
+	margin-left:1px;
+	opacity:.9
 }
 .list-height{
-	height: 500px
+	height: 500px;
 }
 @media only screen and (max-width:768px){
 	.img-res{

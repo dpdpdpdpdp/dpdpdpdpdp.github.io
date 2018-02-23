@@ -299,6 +299,7 @@ app.config([
                     $rootScope.bodyClass = "refractive-page";
                     Page.setTitle("Refractive Surgery");
                     $scope.volume = false;
+                    
                     $scope.$on("$viewContentLoaded", function() {
                         //Here your view content is fully loaded !!
                         $timeout(function() {
@@ -896,6 +897,22 @@ app.config([
     }
 ]);
 app.run(["$rootScope", "$state", "Page","$timeout", function($rootScope, $state, Page,$timeout) {
+	
+	$rootScope.goRefractive = function(state,selector,event) {
+        const currentTarget = event.currentTarget;
+        const closestUl = currentTarget.closest('ul');
+        if (closestUl) {
+            $(closestUl).find('li').each(function(i, eachLi) {
+                eachLi.classList.remove('active');
+            });
+        }
+        $(currentTarget).addClass('active');
+        $('html, body').animate({
+            scrollTop: $(selector).offset().top - 78
+        }, 700);
+        console.log(state=="refractive.lasik2.types");
+        $state.go(state);
+    };
 	
 	$rootScope.scrWidth=screen.width;
 	$rootScope.go = function(state, selector, event) {
