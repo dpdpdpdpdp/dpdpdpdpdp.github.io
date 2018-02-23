@@ -268,9 +268,9 @@
             <div class="row" id="years65" style="padding-bottom: 100px;padding-top: 70px;">
                 <div class="col-md-5 offset-md-1">
                     <div class="homepage-content-block" style="padding-top: 0px;">
-                        <div class="content-block-mini-heading font-pink">Over 65</div>
+                        <div class="content-block-mini-heading font-pink hr1">Over 65</div>
                         <div class="content-block-heading m-font-m2 font-pink text-upper">Years of Expertise</div>
-                        <div class="content-block-content font-blue" style="text-align:justify;{{bioMore ? ((scrWidth<768)? 'height:100%;':'height:252px;'): 'height: 252px;'}}{{bioMore ? 'overflow-y: scroll;' : ''}}">
+                        <div class="content-block-content font-blue" style="text-align:justify;{{bioMore ? ((scrWidth<768)? 'height:auto;':'height:252px;'): 'height: 252px;'}}{{bioMore ? 'overflow-y: scroll;' : ''}}">
                             One man’s pain has a lot of power, power to turn it into a blessing for many. It is a quality of great men to see beyond one’s own personal gain and go ahead on a path of greater good. On 12th September, 1920, our founding father, Dr. P Siva Reddy was born. At the tender age of 9, he witnessed the excruciating experience that blindness was, with his mother fighting glaucoma; he chose to pursue his career in medicine, eventually ophthalmology.
                             <p ng-show="bioMore">
                                 Of all the love in the world, a mother’s love is the strongest, and with her blessing from the beyond Dr. P Siva Reddy created his legacy of healing. Today he regarded with great respect for his contributions. Dr P Siva Reddy’s story is that of sheer dedication, hard work and sincerity toward his vision for a world that is cured of treatable blindness. He was honoured with Padmabushan in 1977, Padmashri in 1971, and B.C Roy Awards in 1981 and again in 1987. Dr. Reddy was appointed as Honorary Surgeon to the President of India, Sri V.V.Giri, in which capacity he served the chair for 25 years. Padmabushan Dr Perugu Siva Reddy Regional Eye Hospital, Kurnool, was named in his honour by the Government of Andhra Pradesh, in recognition of his services.
@@ -285,8 +285,8 @@
                         <br>
                         <div class="content-block-cta text-left">
                             <div class="c-init" style="width: 200px; display: inline-block; ">
-                                <div class="btn-1-div">
-                                    <button ng-click="bioMore=!bioMore;" type="button" class="btn btn-md btn-1">{{ !bioMore ? "Read More" : "Read Less"}}</button>
+                                <div ng-click="bioMore=!bioMore;" class="btn-1-div">
+                                    <button ng-click="(scrWidth<768)?readMoreScroll('.hr1'):''" type="button" class="btn btn-md btn-1">{{ !bioMore ? "Read More" : "Read Less"}}</button>
                                 </div>
                             </div>
                         </div>

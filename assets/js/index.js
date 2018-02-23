@@ -15,6 +15,21 @@ app.config([
                 },
                 templateUrl: "home.html",
                 controller: function($scope, $rootScope, Page, $state, $window, $stateParams) {
+                	$scope.bioMore='';
+                	$scope.readMoreScroll=function(cl){
+                		if($scope.bioMore){
+                			console.log(true);
+                			$('html, body').animate({
+                                scrollTop: $(cl).offset().top-180
+                            }, 700);
+                		}else{
+                			console.log(false);
+                			$('html, body').animate({
+                                scrollTop: $(cl).offset().top
+                            }, 700);
+                		}
+                		
+                	};
                     Page.setTitle("Home Page");
                     $rootScope.bodyClass = "bg-purple";
                     $scope.sharingImage = '';
