@@ -97,20 +97,20 @@
                 </p>
                 <div style="height: 100%;position: relative;padding-bottom: 80px;">
                     <ul class="m-lasik-content-headings">
-                        <li ng-click="go('refractive.visianicl.procedure','.m-left-panel-row .right-sec', $event)"  class="types active">
+                        <li ng-click="go('refractive.visianicl.procedure','.m-left-panel-row .right-sec', $event)"  class="types active t-procedure">
                             <div><span data-width="102">1. PROCEDURE</span>
                             </div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.visianicl.benefits','.m-left-panel-row .right-sec', $event)" class="outcomes">
+                        <li ng-click="go('refractive.visianicl.benefits','.m-left-panel-row .right-sec', $event)" class="outcomes t-benefits">
                             <div><span data-width="167">2. BENEFITS</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.visianicl.recovery','.m-left-panel-row .right-sec', $event)" class="stepbystep">
+                        <li ng-click="go('refractive.visianicl.recovery','.m-left-panel-row .right-sec', $event)" class="stepbystep t-recovery">
                             <div><span data-width="195">3. RECOVERY</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.visianicl.consult','.m-left-panel-row .right-sec', $event)"  class="consult">
+                        <li ng-click="go('refractive.visianicl.consult','.m-left-panel-row .right-sec', $event)"  class="consult t-consult">
                             <div><span data-width="316">4. CONSULT EYE SURGEON</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
@@ -123,6 +123,29 @@
                 <div ui-view="benefits"></div>
                 <div ui-view="recovery"></div>
                 <div ui-view="consult"></div>
+        </div>
+        <div class="d-md-none m-left-panel no-shadow bg-white" style="background: url('images/lasik/lasik-background-min.png') center/cover no-repeat; padding: 10px 0px 10px 60px; width: 100%;">
+            <div style="height: 100%;position: relative;">
+                <ul class="m-lasik-content-headings">
+                    <li ng-click="go('refractive.visianicl.procedure','.m-left-panel-row .right-sec', $event)"  class="types active t-procedure hide">
+                        <div><span data-width="102">1. PROCEDURE</span>
+                        </div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.visianicl.benefits','.m-left-panel-row .right-sec', $event)" class="outcomes t-benefits">
+                        <div><span data-width="167">2. BENEFITS</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.visianicl.recovery','.m-left-panel-row .right-sec', $event)" class="stepbystep t-recovery">
+                        <div><span data-width="195">3. RECOVERY</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.visianicl.consult','.m-left-panel-row .right-sec', $event)"  class="consult t-consult">
+                        <div><span data-width="316">4. CONSULT EYE SURGEON</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="stopscroll"></div>

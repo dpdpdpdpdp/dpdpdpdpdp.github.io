@@ -72,24 +72,24 @@
                 </p>
                 <div style="height: 100%;position: relative;padding-bottom: 80px;">
                     <ul class="m-lasik-content-headings">
-                        <li ng-click="go('refractive.lasik2.types','.m-left-panel-row .right-sec', $event)" class="types active">
+                        <li ng-click="go('refractive.lasik2.types','.m-left-panel-row .right-sec', $event)" class="types active t-types">
                             <div><span data-width="102">1. TYPES</span>
                             </div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.lasik2.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes">
+                        <li ng-click="go('refractive.lasik2.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes t-outcomes">
                             <div><span data-width="167">2. OUTCOMES</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.lasik2.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep">
+                        <li ng-click="go('refractive.lasik2.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep t-stepbystep">
                             <div><span data-width="195">3. STEP-BY-STEP</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.lasik2.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare">
-                            <div><span data-width="361">4. POST-OP CARE & RECOVERY</span></div>
+                        <li ng-click="go('refractive.lasik2.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare t-postopcare">
+                            <div><span data-width="{{ deviceWidth > 500 ? '361' : '267'}}">4. POST-OP CARE & RECOVERY</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
-                        <li ng-click="go('refractive.lasik2.consult','.m-left-panel-row .right-sec', $event)" class="consult">
+                        <li ng-click="go('refractive.lasik2.consult','.m-left-panel-row .right-sec', $event)" class="consult t-consult">
                             <div><span data-width="316">5. CONSULT EYE SURGEON</span></div>
                             <icon class="m-arrow-right pos"></icon>
                         </li>
@@ -104,6 +104,33 @@
                 <div ui-view="stepbystep"></div>
                 <div ui-view="postopcare"></div>
                 <div ui-view="consult"></div>
+            </div>
+        </div>
+        <div class="d-md-none m-left-panel no-shadow bg-white" style="background: url('images/lasik/lasik-background-min.png') center/cover no-repeat; padding: 10px 0px 10px 60px; width: 100%;">
+            <div style="height: 100%;position: relative;">
+                <ul class="m-lasik-content-headings">
+                    <li ng-click="go('refractive.lasik2.types','.m-left-panel-row .right-sec', $event)" class="types active t-types hide">
+                        <div><span data-width="102">1. TYPES</span>
+                        </div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.lasik2.outcomes','.m-left-panel-row .right-sec', $event)" class="outcomes t-outcomes">
+                        <div><span data-width="167">2. OUTCOMES</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.lasik2.stepbystep','.m-left-panel-row .right-sec', $event)" class="stepbystep t-stepbystep">
+                        <div><span data-width="195">3. STEP-BY-STEP</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.lasik2.postopcare','.m-left-panel-row .right-sec', $event)" class="postopcare t-postopcare">
+                        <div><span data-width="{{ deviceWidth > 500 ? '361' : '267'}}">4. POST-OP CARE & RECOVERY</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                    <li ng-click="go('refractive.lasik2.consult','.m-left-panel-row .right-sec', $event)" class="consult t-consult">
+                        <div><span data-width="316">5. CONSULT EYE SURGEON</span></div>
+                        <icon class="m-arrow-right pos"></icon>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
