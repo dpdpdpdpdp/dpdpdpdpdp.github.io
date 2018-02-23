@@ -940,7 +940,7 @@ app.run(["$rootScope", "$state", "Page","$timeout", function($rootScope, $state,
         Page.setDescription(description);
     });
 	
-}])
+}]);
 // app.run(["$rootScope", "$location", "$state", function($rootScope, $location, $state) {
 //                 $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 //                     //window.scrollTo(0, 0);

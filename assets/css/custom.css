@@ -764,6 +764,10 @@ ul.m-cataract-content-headings li {
     font-family: 'Museosans2';
 }
 
+.m-fixed-links {
+    position: fixed !important;
+}
+
 ul.m-cataract-content-headings li.active {
     font-size: 1.5rem;
     color: rgb(235, 60, 128);
